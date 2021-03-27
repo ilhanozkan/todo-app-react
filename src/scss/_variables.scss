@@ -1,0 +1,21 @@
+// Colors
+
+$white: #fff;
+$border-white: rgba(255, 255, 255, 0.65);
+$light-beige: rgba(252, 248, 242, 0.3);
+
+// Gradients
+
+$green: linear-gradient(180deg, #50FA7F 0%, #4AD671 84.9%);
+$pinky: linear-gradient(180deg, #FF8585 2.79%, #FF7C7C 40.59%);
+$pinky-hover: linear-gradient(180deg, #f07979 2.79%, #e86e6e 40.59%);
+$bg-gradient: linear-gradient(180deg, #FFD494 0%, #FFB257 58.33%, #FF9680 100%);
+$label-odd: linear-gradient(180deg, #FFCE68 6.77%, #FFB667 51.56%, #FF9D66 98.44%);
+$label-even: linear-gradient(180deg, #FF9D66 6.77%, #FF7866 98.44%);
+$input-text: linear-gradient(180deg, #FFCE68 6.77%, #FF9D66 98.44%);
+
+// Shadows
+
+$shadow-container: 1px 2px 8px 0px rgba(0, 0, 0, 0.2); 
+$shadow-container-hover: 1px 2px 12px 0px rgba(0, 0, 0, 0.25); 
+$shadow-label:  2px 2px 45px 0px rgba(0, 0, 0, 0.08);

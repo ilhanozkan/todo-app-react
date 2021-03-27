@@ -1,0 +1,13 @@
+$breakpoint-tablet: 768px;
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .middle {
+    display: none;
+  }
+  
+  .bg-shapes__ellipses--bottom--right {
+    transform: scale(0.5);
+    margin-bottom: 100px;
+    margin-right: 95px;
+  }
+}

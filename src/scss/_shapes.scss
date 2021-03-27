@@ -1,0 +1,46 @@
+.bg-shapes {
+  position: absolute;
+  z-index: -2;
+  
+  &__ellipses {
+    &--top--left {
+      top: -114px;
+      left: -135px;
+      width: 30.8125rem;
+      animation: shapeLeftVisible 1.2s linear;
+    }
+    
+    &--middle {
+      &--top {
+        top: -16px;
+        animation: shapeTopVisible 1.2s linear;
+      }
+      
+      &--bottom {
+        bottom: 30px;
+        left: 400px;
+        width: 15.625rem;
+        animation: shapeBottomVisible 1.2s linear;
+      }
+      
+      &--left {
+        top: 184px;
+        left: 280px;
+        width: 12.5rem;
+        animation: shapeLeftVisible 1.2s linear;
+      }
+      
+      &--right {
+        right: 324px;
+        width: 18.875rem;
+      }
+    }
+
+    &--bottom--right {
+      bottom: -100px;
+      right: -95px;
+      width: 22rem;
+      animation: shapeRightVisible 1.2s linear;
+    }
+  }
+}

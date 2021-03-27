@@ -1,0 +1,199 @@
+.todo-container {
+  margin: 50vh auto;
+  transform: translateY(-50%);
+  box-sizing: content-box;
+  width: 24rem;
+  min-height: 28.5rem;
+  background-color: $light-beige;
+  border-top: 1px solid $border-white;
+  border-left: 1px solid $border-white;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  background-clip: content-box, border-box;
+  box-shadow: $shadow-container;
+  transition: box-shadow 350ms ease-in-out;
+  overflow: hidden;
+  
+  &:hover {
+    box-shadow: $shadow-container-hover;
+  }
+}
+
+.todo-elements {
+  padding: 2rem 1.25rem;
+
+  div:nth-child(even) {
+    label {
+      background: $label-even;
+    }
+  }
+
+  input[type="text"] {
+    padding: 1rem 1.25rem;
+    width: 12.875rem;
+    height: 2.375rem;
+    background: $input-text;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    color: $white;
+
+    &::placeholder {
+      color: rgba(253, 253, 253, 0.8);
+    }
+  }
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 3.2rem;
+  padding: 0 20px;
+  background: $label-odd;
+  border-radius: 50px;
+  box-shadow: $shadow-label;
+
+  p {
+    max-width: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+  }
+}
+
+input[type="checkbox"] {
+  margin-right: 0.85rem;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+// Checkbox Design
+
+.control_indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  height: 26px;
+  width: 26px;
+  background: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+}
+
+.control_indicator:hover {
+  border-color: #4AD671;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.control input:checked ~ .control_indicator {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #4AD671;
+}
+
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 10px;
+  border: solid #4AD671;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.control-checkbox .control_indicator::before {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background:  #50FA7F;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 1;
+  transform: scale(0);
+}
+
+.control-checkbox input + .control_indicator::before {
+  animation: ripple 400ms ease-out;
+}
+
+.control-checkbox input:checked + .control_indicator::before {
+  animation-name: ripple-dup;
+}
+
+// Checkbox Design
+
+.todo-footer--left {
+  position: relative;
+  width: 12.875rem;
+  height: 2.375rem;
+  margin-bottom: 0.75rem;
+  margin-left: 1.25rem;
+
+  button.icon-add {
+    background: $green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.todo-footer--right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: -2.75rem;
+  right: 1.25rem;
+}
+
+.todo-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  background: $pinky;
+
+  p {
+    font-weight: 400;
+  }
+  
+  p:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  p:nth-child(2) {
+    transform: translateY(-34px);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+}
+
+button.icon-clear {
+  background: $pinky;
+  margin-bottom: 0.25rem;
+}
